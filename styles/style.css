@@ -18,11 +18,18 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 
 #logo {
-    margin: 1em;
-    font-size: large;
+    margin: 0 1em;
+    font-size: x-large;
+}
+
+#logo>a {
+    text-decoration: none;
+    list-style: none;
+    color: var(--color-light);
 }
 
 nav>ul {
