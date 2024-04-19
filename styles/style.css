@@ -12,6 +12,11 @@ header {
     justify-content: space-between;
 }
 
+#logo {
+    margin: 1em;
+    font-size: large;
+}
+
 nav>ul {
     display: flex;
     flex-direction: row;
@@ -19,7 +24,7 @@ nav>ul {
 }
 
 nav>ul>li {
-    margin: 1em;
+    padding: 1em;
     list-style: none;
 }
 
@@ -27,4 +32,9 @@ ul>li>a {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #fbf5f5;
     text-decoration: none;
+}
+
+nav>ul>li:hover {
+
+    background: linear-gradient(to right, #642b73, #c6426e);
 }
