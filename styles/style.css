@@ -66,8 +66,20 @@ nav>ul>li:hover {
     background-image: url(../assets/img/banner-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: rgba(40, 11, 69, 0.5);
+    background-color: rgba(40, 11, 69, 0.6);
     background-blend-mode: multiply;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--color-light);
+}
+
+h1 {
+    font-size: 4em;
+    color: var(--color-light);
+    text-shadow: 0 2px 20px var(--color-principal);
+    font-family: "Nunito", sans-serif;
 }
 
 /* Termina estilos del Hero */
