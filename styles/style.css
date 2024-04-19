@@ -4,9 +4,17 @@
     padding: 0;
 }
 
+:root {
+    --color-dark : #280B45;
+    --color-light: #fbf5f5;
+    --color-principal: #C84771;
+    --color-contraste: #61105E;
+    --color-secundario: #FFE98A;
+}
+
 header {
-    background-color: #280B45;
-    color: #fbf5f5;
+    background-color: var(--color-dark);
+    color: var(--color-light);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -30,11 +38,10 @@ nav>ul>li {
 
 ul>li>a {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #fbf5f5;
+    color: var(--color-light);
     text-decoration: none;
 }
 
 nav>ul>li:hover {
-
-    background: linear-gradient(to right, #642b73, #c6426e);
+    background: linear-gradient(to right, var(--color-contraste), var(--color-principal));
 }
