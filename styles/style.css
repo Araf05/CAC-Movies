@@ -12,13 +12,17 @@
     --color-secundario: #FFE98A;
 }
 
+/* Comienza estilos del Header */
+
 header {
+    width: 100%;
     background-color: var(--color-dark);
     color: var(--color-light);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    position: fixed;    
 }
 
 #logo {
@@ -52,3 +56,16 @@ ul>li>a {
 nav>ul>li:hover {
     background: linear-gradient(to right, var(--color-contraste), var(--color-principal));
 }
+
+/* Termina estilos del Header */
+
+/* Comienza estilos del Hero */
+
+#hero {
+    height: 100vh;
+    background-image: url(../assets/img/banner-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Termina estilos del Hero */
