@@ -13,53 +13,21 @@
 }
 
 /* Comienza estilos del Header */
-
 header {
-    width: 100%;
     background-color: var(--color-dark);
-    color: var(--color-light);
-    position: fixed;    
-}
-
-nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
 }
 #logo {
-    margin: 0 1em;
-    font-size: x-large;
+    padding: 0.5em 1em;
 }
-
-#logo>a {
-    text-decoration: none;
-    list-style: none;
-    color: var(--color-light);
+._nav {
+    padding: 0;
 }
-p {
-    margin: 0px;
+.menu {
+    padding: 0.5em;
 }
-nav>ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 0px;
-}
-
-nav>ul>li {
-    padding: 1em;
-    list-style: none;
-}
-
-ul>li>a {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: var(--color-light);
-    text-decoration: none;
-}
-
-nav>ul>li:hover {
+.menu:hover {
     background: linear-gradient(to bottom, var(--color-contraste), var(--color-principal));
+    margin: 0;
 }
 
 /* Termina estilos del Header */
@@ -81,18 +49,15 @@ nav>ul>li:hover {
     align-items: center;
 }
 
-h1 {
+._h1 {
     color: var(--color-light);
-    font-size: 4em;
     text-shadow: 0 0 10px var(--color-dark);
     font-family: "Nunito", sans-serif;
-    margin: 0.5em 0;
+    font-weight: 500;
 }
 
-h3 {
-    font-size: 2em;
+._h3 {
     font-family: "Nunito", sans-serif;
-    font-weight: 300;
 }
 
 ._btn {
@@ -101,8 +66,7 @@ h3 {
     background-color: var(--color-contraste);
     border-radius: 5px;
     color: var(--color-light);
-    border: none;
-    
+    border: none;   
 }
 
 ._btn:hover {
@@ -111,7 +75,8 @@ h3 {
 }
 
 ._btn:active {
-    background-color: transparent;
+    background: transparent;
+    border: 1px solid var(--color-secundario);
 }
 
 /* Termina estilos del Hero */
