@@ -18,7 +18,7 @@
 </head>
 <body>
     <header class="sticky-top">
-        <nav class="navbar navbar-expand-sm navbar-dark _nav">
+        <nav class="navbar navbar-expand-lg navbar-dark _nav">
             <a href="#" class="nav-link" id="logo">
                 <span class="navbar-brand"><i class="fi fi-ss-clapperboard-play"></i> CAC-Movies</span>
             </a>
@@ -41,32 +41,77 @@
         </nav>
     </header>
     <main>
-        <div id="hero">
+        <section id="hero">
             <h1 class="display-1 _h1">Películas y series ilimitadas <br/> en un sólo lugar</h1>
             <h3 class="h3 _h3">Disfrutá donde quieras.<br/> Cancelá en cualquier momento.</h3>
             <br/>
             <button class="_btn principal">Registrate</button>
-        </div>
-        <div id="buscador">
-            <h2>¿Qué estas buscando para ver?</h2>
+        </section>
+        <section id="buscador">
+            <h2 class="display-6 _h2">¿Qué estas buscando para ver?</h2>
             <span class="span-search">
                 <input class="search" type="text" placeholder="Buscar...">
                 <button class="_btn secundario" type="submit">Buscar</button>
             </span>
-            <hr>
-        </div>
-        <div id="tendencias">
-            <h2>Las tendencias de hoy</h2>
-            <div class="pelicula">
-                <img src="" alt="">
+        </section>
+        <hr>
+        <section id="tendencias">
+            <h2 class="display-6 _h2">Las tendencias de hoy</h2>
+            <!-- Comienza el grid de peliculas -->
+            <div class="container-fluid">
+                <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 gap-0">
+                    <div class="col colum">
+                        <div class="card">
+                            <img src="./assets/img/peli_1.jpg" class="card-img" alt="The Beekeeper">
+                        </div>
+                    </div>
+                    <div class="col colum">
+                        <div class="card">
+                            <img src="./assets/img/peli_1.jpg" class="card-img " alt="The Beekeeper">
+                        </div>
+                    </div>
+                    <div class="col colum">
+                        <div class="card">
+                            <img src="./assets/img/peli_1.jpg" class="card-img " alt="The Beekeeper">
+                        </div>
+                    </div>
+                    <div class="col colum">
+                        <div class="card">
+                            <img src="./assets/img/peli_1.jpg" class="card-img " alt="The Beekeeper">
+                        </div>
+                    </div>
+                    <div class="col colum">
+                        <div class="card">
+                            <img src="./assets/img/peli_1.jpg" class="card-img" alt="The Beekeeper">
+                        </div>
+                    </div>
+                    <div class="col colum">
+                        <div class="card">
+                            <img src="./assets/img/peli_1.jpg" class="card-img " alt="The Beekeeper">
+                        </div>
+                    </div>
+                    <div class="col colum">
+                        <div class="card">
+                            <img src="./assets/img/peli_1.jpg" class="card-img " alt="The Beekeeper">
+                        </div>
+                    </div>
+                    <div class="col colum">
+                        <div class="card">
+                            <img src="./assets/img/peli_1.jpg" class="card-img " alt="The Beekeeper">
+                        </div>
+                    </div>
+                </div>
             </div>
-            <button class="btn">Anterior</button>
-            <button class="btn">Siguiente</button>
-            <hr>
-        </div>
-        <div class="carrusel">
+            <!-- Termina el grid de peliculas -->
+            <span>
+                <button class="_btn secundario">Anterior</button>
+                <button class="_btn secundario">Siguiente</button>
+            </span>
+        </section>
+        <hr>
+        <section class="carrusel">
             <h2>Las más aclamadas</h2>
-        </div>
+        </section>
     </main>
     <footer>
         <ul>

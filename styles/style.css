@@ -12,6 +12,18 @@
     padding: 0px;
 }
 
+body {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
 /* Comienza estilos del Header */
 header {
     background-color: var(--color-dark);
@@ -41,16 +53,10 @@ header {
     background-size: cover;
     background-color: rgba(40, 11, 69, 0.8);
     background-blend-mode: multiply;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: var(--color-light);
     align-items: center;
 }
 
 ._h1 {
-    color: var(--color-light);
     text-shadow: 0 0 10px var(--color-dark);
     font-family: "Nunito", sans-serif;
     font-weight: 500;
@@ -58,6 +64,7 @@ header {
 
 ._h3 {
     font-family: "Nunito", sans-serif;
+    font-weight: 200;
 }
 
 ._btn {
@@ -65,7 +72,7 @@ header {
     height: 50px;
     border-radius: 5px;
     color: var(--color-light);
-    border: none;   
+    border: none;
 }
 
 .principal {
@@ -86,13 +93,12 @@ header {
 
 /* Comienza estilos del buscador */
 #buscador {
-    background-color: var(--color-dark);
-    color: var(--color-light);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    padding: 3em 0;
+    padding: 5em 0;
+}
+
+._h2 {
+    font-family: "Nunito", sans-serif;
+    font-weight: bold;
 }
 
 .span-search {
@@ -132,12 +138,26 @@ header {
 
 .secundario {
     background-color: transparent;
-    color: var(--color-light);
     font-size: larger;
     border: 1px solid var(--color-light);
 }
 
 hr {
-    border: 2px solid var(--color-light);
+    border: 4px solid var(--color-light);
 }
 /* Termina estilos del buscador */
+
+/* Comienza estilos de tendencias */
+.colum {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0;
+    margin: 1em 0;
+}
+
+.card {
+    width: 12rem;
+}
+
+/* Termina estilos de tendencias */
