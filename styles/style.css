@@ -1,15 +1,15 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 :root {
     --color-dark : #280B45;
-    --color-light: #fbf5f5;
+    --color-light: #c9c4c9;
     --color-principal: #C84771;
     --color-contraste: #61105E;
     --color-secundario: #FFE98A;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
 }
 
 /* Comienza estilos del Header */
@@ -18,13 +18,15 @@ header {
     width: 100%;
     background-color: var(--color-dark);
     color: var(--color-light);
+    position: fixed;    
+}
+
+nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    position: fixed;    
 }
-
 #logo {
     margin: 0 1em;
     font-size: x-large;
@@ -35,11 +37,14 @@ header {
     list-style: none;
     color: var(--color-light);
 }
-
+p {
+    margin: 0px;
+}
 nav>ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin: 0px;
 }
 
 nav>ul>li {
@@ -54,7 +59,7 @@ ul>li>a {
 }
 
 nav>ul>li:hover {
-    background: linear-gradient(to right, var(--color-contraste), var(--color-principal));
+    background: linear-gradient(to bottom, var(--color-contraste), var(--color-principal));
 }
 
 /* Termina estilos del Header */
@@ -66,20 +71,47 @@ nav>ul>li:hover {
     background-image: url(../assets/img/banner-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: rgba(40, 11, 69, 0.6);
+    background-color: rgba(40, 11, 69, 0.8);
     background-blend-mode: multiply;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     color: var(--color-light);
+    align-items: center;
 }
 
 h1 {
-    font-size: 4em;
     color: var(--color-light);
-    text-shadow: 0 2px 20px var(--color-principal);
+    font-size: 4em;
+    text-shadow: 0 0 10px var(--color-dark);
     font-family: "Nunito", sans-serif;
+    margin: 0.5em 0;
+}
+
+h3 {
+    font-size: 2em;
+    font-family: "Nunito", sans-serif;
+    font-weight: 300;
+}
+
+._btn {
+    width: 120px;
+    height: 50px;
+    background-color: var(--color-contraste);
+    border-radius: 5px;
+    color: var(--color-light);
+    border: none;
+    
+}
+
+._btn:hover {
+    background: linear-gradient(to bottom, var(--color-contraste), var(--color-principal));
+    border: none;
+}
+
+._btn:active {
+    background-color: transparent;
 }
 
 /* Termina estilos del Hero */
