@@ -42,17 +42,19 @@
     </header>
     <main>
         <div id="hero">
-            <h1 class="display-1  _h1 flex-wrap">Películas y series ilimitadas <br/> en un sólo lugar</h1>
+            <h1 class="display-1 _h1">Películas y series ilimitadas <br/> en un sólo lugar</h1>
             <h3 class="h3 _h3">Disfrutá donde quieras.<br/> Cancelá en cualquier momento.</h3>
             <br/>
-            <button class="_btn">Registrate</button>
+            <button class="_btn principal">Registrate</button>
         </div>
         <div id="buscador">
             <h2>¿Qué estas buscando para ver?</h2>
-            <input type="text" placeholder="buscar...">
-            <button class="btn submit" type="submit">Buscar</button>
+            <span class="span-search">
+                <input class="search" type="text" placeholder="Buscar...">
+                <button class="_btn secundario" type="submit">Buscar</button>
+            </span>
+            <hr>
         </div>
-        <hr>
         <div id="tendencias">
             <h2>Las tendencias de hoy</h2>
             <div class="pelicula">
@@ -60,8 +62,8 @@
             </div>
             <button class="btn">Anterior</button>
             <button class="btn">Siguiente</button>
+            <hr>
         </div>
-        <hr>
         <div class="carrusel">
             <h2>Las más aclamadas</h2>
         </div>

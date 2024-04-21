@@ -63,10 +63,13 @@ header {
 ._btn {
     width: 120px;
     height: 50px;
-    background-color: var(--color-contraste);
     border-radius: 5px;
     color: var(--color-light);
     border: none;   
+}
+
+.principal {
+    background-color: var(--color-contraste);
 }
 
 ._btn:hover {
@@ -80,3 +83,61 @@ header {
 }
 
 /* Termina estilos del Hero */
+
+/* Comienza estilos del buscador */
+#buscador {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 3em 0;
+}
+
+.span-search {
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    padding: 2em 0;
+}
+
+.search {
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: none;
+    border-radius: 25px;
+    padding: 0.5em 1em;
+    font-size: large;
+    color: white;
+}
+.search::placeholder {
+    color: white;
+}
+
+.search:focus {
+    outline-style: none;
+}
+
+@media screen and (max-width: 700px) {
+    .span-search {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search {
+        width: 80%;
+    }
+}
+
+.secundario {
+    background-color: transparent;
+    color: var(--color-light);
+    font-size: larger;
+    border: 1px solid var(--color-light);
+}
+
+hr {
+    border: 2px solid var(--color-light);
+}
+/* Termina estilos del buscador */
