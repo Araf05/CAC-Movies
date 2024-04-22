@@ -152,12 +152,43 @@ hr {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     padding: 0;
-    margin: 1em 0;
+    margin: 2em 0;
 }
 
 .card {
     width: 12rem;
+    height: fit-content;
+    border: none;
+    background-color: #280B45;
+    align-items: center;
 }
+
+.card:hover {
+    width: 11rem;
+    height: fit-content;
+    box-shadow: 0 0 20px var(--color-secundario);
+}
+
+.tituloPelicula {
+    z-index: 2;
+    position: absolute;
+    text-align: center;
+    top:0;
+    width: 100%;
+    height: 16.5rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: transparent;
+    border-radius: 5px;
+}
+
+.tituloPelicula:hover {
+    color: #ffff;
+    backdrop-filter: blur(10px);
+}
+
 
 /* Termina estilos de tendencias */
