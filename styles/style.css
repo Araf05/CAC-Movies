@@ -189,6 +189,21 @@ hr {
     color: #ffff;
     backdrop-filter: blur(10px);
 }
-
-
 /* Termina estilos de tendencias */
+
+/* Comienza estilos de las mas aclamadas */
+.pelis-aclamadas {
+    display: flex;
+    flex-direction: row;
+    gap: 8em;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    margin: 5em;
+    padding: 3em;
+    height: 400px;
+    overflow-x: auto;
+
+    scroll-snap-align: start;
+}
+
+/* Termina estilos de las más aclamandas */
