@@ -17,6 +17,25 @@ body {
     color: var(--color-light);
 }
 
+body::-webkit-scrollbar {
+    width: 12px;
+    /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--color-dark);
+    /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--color-contraste);
+    /* color of the scroll thumb */
+    border-radius: 20px;
+    /* roundness of the scroll thumb */
+    border: 3px solid var(--color-dark);
+    /* creates padding around scroll thumb */
+}
+
 section {
     display: flex;
     flex-direction: column;
@@ -192,18 +211,41 @@ hr {
 /* Termina estilos de tendencias */
 
 /* Comienza estilos de las mas aclamadas */
+#aclamadas {
+    align-items: center;
+}
+
 .pelis-aclamadas {
+    width: 70%;
+    height: 300px;
+    margin: 0 5em;
+    padding: 2em 3em;
     display: flex;
     flex-direction: row;
-    gap: 8em;
+    gap: 5em;
     flex-wrap: nowrap;
     justify-content: space-evenly;
-    margin: 5em;
-    padding: 3em;
-    height: 400px;
     overflow-x: auto;
-
-    scroll-snap-align: start;
 }
+
+.pelis-aclamadas::-webkit-scrollbar {
+    width: 12px;
+    /* width of the entire scrollbar */
+}
+
+.pelis-aclamadas::-webkit-scrollbar-track {
+    background: var(--color-dark);
+    /* color of the tracking area */
+}
+
+.pelis-aclamadas::-webkit-scrollbar-thumb {
+    background-color: var(--color-principal);
+    /* color of the scroll thumb */
+    border-radius: 20px;
+    /* roundness of the scroll thumb */
+    border: 3px solid var(--color-dark);
+    /* creates padding around scroll thumb */
+}
+
 
 /* Termina estilos de las más aclamandas */
