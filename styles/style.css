@@ -247,5 +247,45 @@ hr {
     /* creates padding around scroll thumb */
 }
 
-
 /* Termina estilos de las más aclamandas */
+
+/* Empieza estilos del footer */
+footer {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    width: 100%;
+    background-color: var(--color-dark);
+    margin: 2em 0 0 0 ;
+    padding: 0;
+}
+
+footer>ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+}
+
+@media screen and (min-width: 1000px) {
+    footer>ul {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+
+.link {
+    display: block;
+    height: auto;
+    width: 100%;
+    text-decoration: none;
+    color: var(--color-light);
+}
+
+/* Termina estilos del footer */
