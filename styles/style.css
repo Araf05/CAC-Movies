@@ -167,6 +167,10 @@ hr {
 /* Termina estilos del buscador */
 
 /* Comienza estilos de tendencias */
+#tendencias {
+    margin: 0 5em;
+}
+
 .colum {
     display: flex;
     flex-direction: row;
@@ -266,6 +270,7 @@ footer>ul {
     width: 100%;
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 @media screen and (min-width: 1000px) {
@@ -284,6 +289,7 @@ footer>ul {
     display: block;
     height: auto;
     width: 100%;
+    padding: 0.5em;
     text-decoration: none;
     color: var(--color-light);
 }
