@@ -169,6 +169,7 @@ hr {
 /* Comienza estilos de tendencias */
 #tendencias {
     margin: 0 4em;
+    padding: 4em 0 0;
 }
 .grilla-peliculas {
     margin: 0 auto;
@@ -188,7 +189,7 @@ hr {
     width: 12rem;
     height: fit-content;
     border: none;
-    background-color: #280B45;
+    /* background-color: #280B45; */
     align-items: center;
 }
 
@@ -304,6 +305,11 @@ footer>ul {
     text-decoration: none;
     color: var(--color-light);
 }
+
+li:last-child {
+    background-color: var(--color-contraste);
+}
+
 
 /* Termina estilos del footer */
 
