@@ -15,13 +15,9 @@ body {
     justify-content: center;
     gap: 2em;
     align-items: center;
-    padding: 1em;
+    padding: 2em;
     height: min-content;
     width: 100%;
-}
-
-.texto-detalle {
-    width: 80%;
 }
 
 .director-detalle {
@@ -60,5 +56,26 @@ span>h6 {
     .director-detalle {
         flex-direction: row;
         gap: 2em;
+    }
+}
+
+#trailer {
+    padding: 4em 2em;
+    text-align: start;
+}
+
+#tabla {
+    width: 100%;
+    padding: 2em;
+}
+
+th {
+    text-align: center;
+}
+
+@media screen and (min-width: 900px) {
+    #tabla {
+        width: 50%;
+        margin: auto;
     }
 }
