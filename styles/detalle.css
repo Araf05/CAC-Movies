@@ -1,0 +1,31 @@
+.bg-detalle {
+    background-image: url(../assets/img/mario-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-color: var(--color-dark);
+    background-blend-mode: soft-light;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    padding: 4em 4em;
+    height: auto;
+}
+
+.texto-detalle {
+    width: 60%;
+}
+
+.director-detalle {
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+}
+
+.img-detalle {
+    position: absolute;
+    left: 150px;
+    top: 100px;
+    border-radius: 15px;
+}
