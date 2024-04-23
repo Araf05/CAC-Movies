@@ -48,7 +48,7 @@
         <section id="buscador" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
             <h2 class="display-6 _h2">¿Qué estas buscando para ver?</h2>
             <span class="span-search">
-                <input class="search" type="text" placeholder="Buscar...">
+                <input id="input-buscar" class="search" type="text" placeholder="Buscar...">
                 <button class="_btn secundario" type="submit">Buscar</button>
             </span>
         </section>
@@ -57,78 +57,27 @@
             <h2 class="display-6 _h2">Las tendencias de hoy</h2>
             <!-- Comienza el grid de peliculas -->
             <div class="container-fluid">
-                <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 gap-0">
-                    <div class="col colum">
-                        <div class="card">
-                            <img src="./assets/img/peli_1.jpg" class="card-img" alt="The Beekeeper">
-                            <div class="tituloPelicula">
-                                <h5>The Beekeeper</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col colum">
-                        <div class="card">
-                            <img src="./assets/img/peli_2.jpg" class="card-img " alt="Badland Hunters">
-                            <div class="tituloPelicula">
-                                <h5>Badland Hunters</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col colum">
-                        <div class="card">
-                            <img src="./assets/img/peli_3.jpg" class="card-img " alt="The Marvels">
-                            <div class="tituloPelicula">
-                                <h5>The Marvels</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col colum">
-                        <div class="card">
-                            <img src="./assets/img/peli_4.jpg" class="card-img " alt="Wonka">
-                            <div class="tituloPelicula">
-                                <h5>Wonka</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col colum">
-                        <div class="card">
-                            <img src="./assets/img/peli_5.jpg" class="card-img" alt="Aquaman">
-                            <div class="tituloPelicula">
-                                <h5>Aquaman</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col colum">
-                        <div class="card">
-                            <img src="./assets/img/peli_6.jpg" class="card-img " alt="Migration">
-                            <div class="tituloPelicula">
-                                <h5>Migration</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col colum">
-                        <div class="card">
-                            <img src="./assets/img/peli_7.jpg" class="card-img " alt="60 Minutes">
-                            <div class="tituloPelicula">
-                                <h5>60 Minutes</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col colum">
-                        <div class="card">
-                            <img src="./assets/img/peli_8.jpg" class="card-img " alt="Wish">
-                            <div class="tituloPelicula">
-                                <h5>Wish</h5>
-                            </div>
-                        </div>
-                    </div>
+                <div id="listado-peliculas" class="row row-cols-1 row-cols-md-3 row-cols-lg-4 gap-0">            
                 </div>
             </div>
             <!-- Termina el grid de peliculas -->
-            <span class="">
-                <button class="_btn secundario">Anterior</button>
-                <button class="_btn secundario">Siguiente</button>
+            <span class="paginacion">
+                <button id="anterior" class="_btn secundario">Anterior</button>
+                <span id="informacion-pagina"></span>
+                <button id="siguiente" class="_btn secundario">Siguiente</button>
             </span>
+            <!-- Plantilla para cards de peliculas -->
+            <template id="plantilla-card" >
+                <div class="col colum">
+                    <div class="card">
+                        <img src="" class="card-img" alt="">
+                        <div class="tituloPelicula">
+                            <h5 id="titulo"></h5>
+                        </div>
+                    </div>
+                </div>
+            </template>
+            <!-- Termina plantilla para cards de peliculas -->
         </section>
         <hr>
         <section id="aclamadas" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
@@ -164,5 +113,6 @@
     <script>
         AOS.init();
     </script>
+    <script src="./js/pelis_cards.js"></script>
 </body>
 </html>
