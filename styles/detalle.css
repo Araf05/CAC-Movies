@@ -1,3 +1,7 @@
+body {
+    font-family: "Nunito", sans-serif;
+}
+
 .bg-detalle {
     background-image: url(../assets/img/mario-bg.jpg);
     background-repeat: no-repeat;
@@ -7,25 +11,54 @@
     background-blend-mode: soft-light;
 
     display: flex;
-    flex-direction: row;
-    justify-content: end;
-    padding: 4em 4em;
-    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2em;
+    align-items: center;
+    padding: 1em;
+    height: min-content;
+    width: 100%;
 }
 
 .texto-detalle {
-    width: 60%;
+    width: 80%;
 }
 
 .director-detalle {
     display: flex;
-    flex-direction: row;
-    gap: 2em;
+    flex-direction: column;
+}
+span>h6 {
+    margin: 0;
 }
 
 .img-detalle {
-    position: absolute;
-    left: 150px;
-    top: 100px;
+    width: 200px;
     border-radius: 15px;
+}
+
+@media screen and (min-width: 900px) {
+    .bg-detalle {
+        flex-direction: row;
+        justify-content: end;
+        padding: 4em;
+        height: 450px;
+    }
+
+    .img-detalle {
+        width: auto;
+        position: absolute;
+        left: 150px;
+        top: 100px;
+        border-radius: 15px;
+    }
+
+    .texto-detalle {
+        width: 50%;
+    }
+
+    .director-detalle {
+        flex-direction: row;
+        gap: 2em;
+    }
 }
