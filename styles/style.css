@@ -168,8 +168,12 @@ hr {
 
 /* Comienza estilos de tendencias */
 #tendencias {
-    margin: 0 5em;
+    margin: 0 4em;
 }
+.grilla-peliculas {
+    margin: 0 auto;
+}
+
 
 .colum {
     display: flex;
@@ -211,6 +215,15 @@ hr {
 .tituloPelicula:hover {
     color: #ffff;
     backdrop-filter: blur(10px);
+}
+
+.paginacion {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
 }
 /* Termina estilos de tendencias */
 
@@ -282,8 +295,6 @@ footer>ul {
         justify-content: center;
     }
 }
-
-
 
 .link {
     display: block;

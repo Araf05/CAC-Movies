@@ -34,7 +34,7 @@ const baseDeDatos = [
     {
         "id": 5,
         "title": "Aquaman",
-        "image": "./assets/img/peli_1.jpg",
+        "image": "./assets/img/peli_5.jpg",
         "alt": "Aquaman"
     },
     {
