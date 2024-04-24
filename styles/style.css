@@ -1,9 +1,9 @@
 :root {
-    --color-dark : #280B45;
+    --color-dark: #280b45;
     --color-light: #c9c4c9;
-    --color-principal: #C84771;
-    --color-contraste: #61105E;
-    --color-secundario: #FFE98A;
+    --color-principal: #c84771;
+    --color-contraste: #61105e;
+    --color-secundario: #ffe98a;
 }
 
 * {
@@ -57,8 +57,16 @@ header {
     padding: 0.5em;
 }
 .menu:hover {
-    background: linear-gradient(to bottom, var(--color-contraste), var(--color-principal));
+    background: linear-gradient(
+        to bottom,
+        var(--color-contraste),
+        var(--color-principal)
+    );
     margin: 0;
+}
+
+#btnLogin {
+    background-color: var(--color-contraste);
 }
 
 /* Termina estilos del Header */
@@ -99,7 +107,11 @@ header {
 }
 
 ._btn:hover {
-    background: linear-gradient(to bottom, var(--color-contraste), var(--color-principal));
+    background: linear-gradient(
+        to bottom,
+        var(--color-contraste),
+        var(--color-principal)
+    );
     border: none;
 }
 
@@ -175,7 +187,6 @@ hr {
     margin: 0 auto;
 }
 
-
 .colum {
     display: flex;
     flex-direction: row;
@@ -203,7 +214,7 @@ hr {
     z-index: 2;
     position: absolute;
     text-align: center;
-    top:0;
+    top: 0;
     width: 100%;
     height: 16.5rem;
     display: flex;
@@ -274,11 +285,11 @@ footer {
     text-align: center;
     width: 100%;
     background-color: var(--color-dark);
-    margin: 2em 0 0 0 ;
+    margin: 2em 0 0 0;
     padding: 0;
 }
 
-footer>ul {
+footer > ul {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -288,7 +299,7 @@ footer>ul {
 }
 
 @media screen and (min-width: 1000px) {
-    footer>ul {
+    footer > ul {
         display: flex;
         flex-direction: row;
         text-align: center;
@@ -306,11 +317,6 @@ footer>ul {
     color: var(--color-light);
 }
 
-li:last-child {
-    background-color: var(--color-contraste);
-}
-
-
 /* Termina estilos del footer */
 
 .btn-subir {
@@ -322,3 +328,64 @@ li:last-child {
     z-index: 4;
     font-size: xx-large;
 }
+
+/*estilos pagina login*/
+
+#navLogin{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    width: 99vw;
+    background-color: var(--color-dark);
+    padding: 0;
+} 
+
+
+#navLogin > ul {
+    display: flex;
+    flex-direction: column;
+    width: 99vw;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#bodyLogin {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    height: 100vh;
+    background-image: url(../assets/img/banner-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(40, 11, 69, 0.8);
+    background-blend-mode: multiply;
+}
+
+.formLogin {
+    align-self: center;
+    background-color: #61105e;
+    width: 30rem;
+    height: 25rem;
+    align-items: center;
+    border-radius: 10px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 1.5rem;
+}
+
+#botonLogin{
+    background-color: #280b45;
+}
+
+#botonLogin:hover {
+    width: 11rem;
+    height: fit-content;
+    box-shadow: 0 0 20px var(--color-secundario);
+}
+
