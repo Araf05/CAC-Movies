@@ -33,7 +33,7 @@ span>h6 {
     border-radius: 15px;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1200px) {
     .bg-detalle {
         flex-direction: row;
         justify-content: end;
@@ -90,7 +90,7 @@ span>h6 {
     width: 100%;
     padding: 1em 0;
     margin: auto;
-    font-size: x-large;
+    font-size: large;
 }
 
 table {
@@ -107,7 +107,7 @@ td {
 }
 
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1200px) {
     #container-trailer {
         display: flex;
         flex-direction: row;
