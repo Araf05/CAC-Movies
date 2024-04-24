@@ -13,6 +13,9 @@
 }
 
 body {
+    position: relative;
+    min-height: 100vh;
+    /* max-height: fit-content; */
     background-color: var(--color-dark);
     color: var(--color-light);
 }
@@ -34,6 +37,10 @@ body::-webkit-scrollbar-thumb {
     /* roundness of the scroll thumb */
     border: 3px solid var(--color-dark);
     /* creates padding around scroll thumb */
+}
+
+main {
+    padding-bottom: 3em; 
 }
 
 section {
@@ -308,6 +315,7 @@ footer > ul {
     }
 }
 
+
 .link {
     display: block;
     height: auto;
@@ -352,10 +360,11 @@ footer > ul {
 }
 
 #bodyLogin {
+    position: relative;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    gap: 5rem;
-    height: 100vh;
+    gap: 3rem;
     background-image: url(../assets/img/banner-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -370,6 +379,12 @@ footer > ul {
     height: 25rem;
     align-items: center;
     border-radius: 10px;
+}
+
+@media screen and (max-width: 500px) {
+    .formLogin {
+        width: 90%;
+    }
 }
 
 form{
@@ -387,5 +402,10 @@ form{
     width: 11rem;
     height: fit-content;
     box-shadow: 0 0 20px var(--color-secundario);
+}
+
+#footer-login {
+    position: absolute;
+    bottom: 0;
 }
 
