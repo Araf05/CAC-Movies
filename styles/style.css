@@ -416,39 +416,38 @@ form{
     background-size: cover;
     background-position: center;
 }
-            form{
-                
-                width: 98%;
-                padding:100px;
-                input:not(.check,.boton),select{
-                    width: 30%;
-                    margin-bottom: 20px;
-                    height: 40px;
-                    padding: 0px 20px;
-                    font-size: 1,2rem;
-                    border-radius: 10px;
-                    border: 2px solid #c53b52;
-                    background-color: #312e2e;
-                    outline: none;
-                    color:rgb(129, 120, 120);
-                }
-                .textoAyuda{
-                    color: #c9c4c9;
-                    
-                }
-                .textoAyuda:hover{
-                    color: blue;
-                }
-                .terminos{
-                    color: black;
-                    font-size: 0.9rem;
-                    align-items: center ;
-                    margin-bottom: 20px;
-                    .textoCheck{
-                        margin-left: 20px;
-                    }
-                }
-            }
+.formRegistro{   
+    width: 98%;
+    padding:100px;
+    input:not(.check,.boton),select{
+        width: 30%;
+        margin-bottom: 20px;
+        height: 40px;
+        padding: 0px 20px;
+        font-size: 1,2rem;
+        border-radius: 10px;
+        border: 2px solid #c53b52;
+        background-color: #312e2e;
+        outline: none;
+        color:rgb(129, 120, 120);
+    }
+    .textoAyuda{
+        color: #c9c4c9;
+        
+    }
+    .textoAyuda:hover{
+        color: blue;
+    }
+    .terminos{
+        color: black;
+        font-size: 0.9rem;
+        align-items: center ;
+        margin-bottom: 20px;
+        .textoCheck{
+            margin-left: 20px;
+        }
+    }
+}
 .botonRegistro:hover{
     background-color: #3f003d;
 }
