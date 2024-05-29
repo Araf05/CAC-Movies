@@ -65,9 +65,9 @@
                 </div>
             </nav>
         </header>
-        <main class="formLogin" data-aos="zoom-in-down" data-aos-duration="1500">
+        <main data-aos="zoom-in-down" data-aos-duration="1500">
             <section id="inicio-secion" class="container-fluid" >
-                <form action="" method="get" id="form-Login">
+                <form action="" method="get" class="formLogin">
                     <h2 class="">Iniciar Sesión</h2>
                     <div>
                         <label for="email" class="form-label">Email</label>
@@ -102,6 +102,9 @@
                             <p id="errorPass"></p>
                         </div>
                         <p class="mt-4">¿Olvidó su contraseña?</p>
+                    </div>
+                    <div class="error-text">
+                        <p id="errorLogin"></p>
                     </div>
                     <div>
                         <input

@@ -1,65 +1,66 @@
 const email = document.querySelector("#email");
 const password = document.querySelector("#password");
-const form = document.querySelector("#form-Login");
-const errorText = document.querySelector(".error-text");
-const passIncorrecto = "La contraseña debe tener entre 8 y 16 caracteres"
+const form = document.querySelector(".formLogin");
+const errorEmail = document.querySelector("#errorEmail");
+const errorPass = document.querySelector("#errorPass");
+const errorLogin = document.querySelector("#errorLogin");
 const regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
 
 form.addEventListener("submit", e=> {
     e.preventDefault();
-
-    if(!camposRequerido()) {
-        console.log("completar todos los campos");
-    }
-
-    if(validarEmail()) {
-        console.log("email Valido");
-    }
-    if(validarPassword()) {
-        console.log("password Valido");
+    limpiarMensajes();
+    if(email.value == "") {
+        estiloInput(email, false);
+        errorEmail.textContent = "* Email requerido";
+    } else {
+        if(!validarEmail()) {
+        errorEmail.textContent = "* El email ingresado no es valido";
+        }
+    } 
+    if(password.value == "") {
+        estiloInput(password, false);
+        errorPass.textContent = "* Password requerido";
+    } else {   
+        if(!validarPassword()) {
+            errorPass.textContent = "* La contraseña debe tener entre 8 y 16 caracteres";
+        }
     }
 })
 
-function camposRequerido() {
-    var errores = 0;
-    if(email.value == "") {
-        console.log("email requerido");
-        errores++;
-    }
-    if(password.value == "") {
-        console.log("password requerido");
-        errores++;
-    }
-
-    if(errores == 0){
-        return true;
-    } 
-    return false;
+function limpiarMensajes() {
+    errorLogin.textContent = "";
+    errorEmail.textContent = "";
+    errorPass.textContent = "";
 }
 
+
 function validarPassword() {
-    if((password.value.lenght > 8) && (password.value.lenght < 16)) {
-        password.classList.remove("incorrecto");
-        password.classList.add("correcto");
+    console.log(password.value.length);
+    if((password.value.length >= 8) && (password.value.length <= 16)) {
+        estiloInput(password, true);
         return true;
     }
-    errorPass.value = "passIncorrect";
-    password.classList.remove("correcto");
-    password.classList.add("incorrecto");
-    console.log("password invalido")
+    estiloInput(password, false);
     return false;
 }
 
 function validarEmail() {
-    console.log(regexEmail.test(email.value));
     if(regexEmail.test(email.value)) {
-        email.classList.remove("incorrecto");
-        email.classList.add("correcto");
+        estiloInput(email, true);
         return true;
     }
-    email.classList.remove("correcto");
-    email.classList.add("incorrecto");
-    console.log("email invalido")
+    estiloInput(email, false);
     return false;
+}
+
+function estiloInput(input, esCorrecto) {
+    if(esCorrecto){
+        input.classList.remove("incorrecto");
+        input.classList.add("correcto"); 
+    } else {
+        input.classList.remove("correcto");
+        input.classList.add("incorrecto");
+    }
+    
 }
