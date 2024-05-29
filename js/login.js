@@ -3,7 +3,6 @@ const password = document.querySelector("#password");
 const form = document.querySelector(".formLogin");
 const errorEmail = document.querySelector("#errorEmail");
 const errorPass = document.querySelector("#errorPass");
-const errorLogin = document.querySelector("#errorLogin");
 const regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
 
@@ -29,7 +28,6 @@ form.addEventListener("submit", e=> {
 })
 
 function limpiarMensajes() {
-    errorLogin.textContent = "";
     errorEmail.textContent = "";
     errorPass.textContent = "";
 }

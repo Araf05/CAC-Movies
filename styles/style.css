@@ -401,6 +401,7 @@ form{
 
 #botonLogin{
     background-color: #280b45;
+    width: 11rem;
 }
 
 #botonLogin:hover {
@@ -457,10 +458,16 @@ form{
     background-color: #3f003d;
 }
 
+
+.error-text {
+    color: red;
+    font-size: 0.8em;
+}
+
 .incorrecto {
-    border: 3px solid red !important;
+    border: 3px solid red;
 }
 
 .correcto {
-    border: 3px solid lime !important;
+    border: 3px solid lime;
 }
