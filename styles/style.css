@@ -452,3 +452,10 @@ form{
     background-color: #3f003d;
 }
 
+.incorrecto {
+    border: 3px solid red !important;
+}
+
+.correcto {
+    border: 3px solid lime !important;
+}

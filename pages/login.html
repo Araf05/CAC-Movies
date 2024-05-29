@@ -67,7 +67,7 @@
         </header>
         <main class="formLogin" data-aos="zoom-in-down" data-aos-duration="1500">
             <section id="inicio-secion" class="container-fluid" >
-                <form action="" method="post" class="">
+                <form action="" method="get" id="form-Login">
                     <h2 class="">Iniciar Sesión</h2>
                     <div>
                         <label for="email" class="form-label">Email</label>
@@ -77,8 +77,12 @@
                             id="email"
                             name="email"
                             class="form-control"
+                            autocomplete="false"
+                            
                         />
-                        <div class="error-text"></div>
+                        <div class="error-text">
+                            <p id="errorEmail"></p>
+                        </div>
                     </div>
                     <div>
                         <label for="password" class="form-label"
@@ -90,8 +94,13 @@
                             id="password"
                             name="password"
                             class="form-control"
+                            autocomplete="false"
                             aria-describedby="passwordHelpBlock"
+                            
                         />
+                        <div class="error-text">
+                            <p id="errorPass"></p>
+                        </div>
                         <p class="mt-4">¿Olvidó su contraseña?</p>
                     </div>
                     <div>
@@ -127,6 +136,6 @@
     <script>
         AOS.init();
     </script>
-    <script src="./js/pelis_cards.js"></script>
+    <script src="../js/login.js"></script>
     </body>
 </html>
