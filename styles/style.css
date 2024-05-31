@@ -390,7 +390,18 @@ footer > ul {
     .formLogin {
         width: 90%;
     }
+
+    #bodyLogin {
+        gap: 0;
+    }
 }
+
+@media screen and (max-width: 400px) {
+    main {
+        min-height: 103vh;
+    }
+}
+
 
 form{
     display: flex;
@@ -410,10 +421,11 @@ form{
     box-shadow: 0 0 20px var(--color-secundario);
 }
 
-/* #footer-login {
+#footer-login {
     position: absolute;
     bottom: 0;
-} */
+}
+
 
 /* stylos registrarse */
 
