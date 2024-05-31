@@ -42,18 +42,33 @@
                 <h2 class="h2registro">Registrarse</h2>
                 <div >
                     <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+                    <div class="error-text">
+                        <p id="errorNombre"></p>
+                    </div>
                 </div>
                 <div >
                     <input type="text" name="apellido" id="apellido" placeholder="Apellido" required>
+                    <div class="error-text">
+                        <p id="errorApellido"></p>
+                    </div>
                 </div>
                 <div >
                     <input type="email" name="email" id="email" placeholder="Email" required>
+                    <div class="error-text">
+                        <p id="errorEmail"></p>
+                    </div>
                 </div>                
                 <div >
-                    <input type="password" name="contraseña " id="contraseña" placeholder="Contraseña" required>
+                    <input type="password" name="password" id="password" placeholder="Contraseña" required>
+                    <div class="error-text">
+                        <p id="errorPass"></p>
+                    </div>
                 </div>
                 <div >
                     <input type="date" name="fechaNacimiento " id="fechaNacimiento" placeholder="Fnac.(dd/mm/aaa)" required>
+                    <div class="error-text">
+                        <p id="errorFechaNacimiento"></p>
+                    </div>
                 </div>
 
                 <div>
@@ -75,6 +90,9 @@
                         <option value="El Salvador">El Salvador</option>
                         <option value="Guatemala">Guatemala</option>
                     </select>
+                    <div class="error-text">
+                        <p id="errorPais"></p>
+                    </div>
                 </div>
                 <div class="terminos">
                     <input type="checkbox" class="check" id="terminos" required>
