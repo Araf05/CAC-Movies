@@ -20,7 +20,6 @@ function nuevoUsuario(usuario)
 {
     let div= document.getElementById("api")
     divNuevo= document.createElement("div")
-
     divNuevo.innerHTML=
     `   <img src="${usuario.picture.large}"></img>
         <p>Nombre: ${usuario.name.first}</p>
@@ -51,3 +50,11 @@ async function imprimir()
 }
 
 imprimir()
+
+
+function refrescar() {
+    location.reload()
+}
+
+setInterval(refrescar, 15000)
+
