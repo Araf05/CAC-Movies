@@ -19,11 +19,11 @@ public class ServicePelicula
 	
 	
 	
-	public List<Peliculas> getAllPeliculas() throws ClassNotFoundException ,SQLException 
+	public List<Pelicula> getAllPeliculas() throws ClassNotFoundException, SQLException 
     {
 		
 		
-        List<Peliculas> peliculas = new ArrayList<>();
+        List<Pelicula> peliculas = new ArrayList();
         Connection con = conexion.getConnection();
         String sql = "SELECT * FROM peliculas";
         PreparedStatement ps = con.prepareStatement(sql);
@@ -31,7 +31,7 @@ public class ServicePelicula
 
         
         while (rs.next()) {
-            Peliculas pelicula = new Peliculas
+            Pelicula pelicula = new Pelicula
             	(
                 rs.getInt("id"),
                 rs.getString("titulo"),                
@@ -39,8 +39,7 @@ public class ServicePelicula
                 rs.getString("duracion"),
                 rs.getString("director"),
                 rs.getString("reparto"),
-                rs.getString("sinopsis"),
-                rs.getString("imagen")
+                rs.getString("sinopsis")
                 );
             peliculas.add(pelicula);
         }
@@ -53,10 +52,10 @@ public class ServicePelicula
         
     }
 
-    public Peliculas getPeliculaById(int id) throws ClassNotFoundException ,SQLException 
+    public Pelicula getPeliculaById(int id) throws ClassNotFoundException ,SQLException 
     {
     	
-        Peliculas pelicula = null;
+        Pelicula pelicula = null;
         Connection con = conexion.getConnection();
         String sql = "SELECT * FROM peliculas WHERE id = ?"; //-----> signo de pregunta
         PreparedStatement ps = con.prepareStatement(sql);
@@ -66,15 +65,14 @@ public class ServicePelicula
         
         if (rs.next()) 
         {
-            pelicula = new Peliculas(
+            pelicula = new Pelicula(
                 rs.getInt("id"),
                 rs.getString("titulo"),               
                 rs.getString("genero"),
                 rs.getString("duracion"),
                 rs.getString("director"),
                 rs.getString("reparto"),
-                rs.getString("sinopsis"),
-                rs.getString("imagen")
+                rs.getString("sinopsis")
             );
         }
         
@@ -83,12 +81,12 @@ public class ServicePelicula
         return pelicula;
     }
 
-    public void addPelicula(Peliculas pelicula) throws ClassNotFoundException ,SQLException 
+    public void addPelicula(Pelicula pelicula) throws ClassNotFoundException ,SQLException 
     {
     	
     	
         Connection con = conexion.getConnection();
-        String sql = "INSERT INTO peliculas (titulo,  genero, duracion, director, reparto, sinopsis, imagen) VALUES (?, ?, ?, ?, ?, ?,?)";
+        String sql = "INSERT INTO peliculas (titulo,  genero, duracion, director, reparto, sinopsis) VALUES (?, ?, ?, ?, ?, ?,?)";
         PreparedStatement ps = con.prepareStatement(sql);
         ps.setString(1, pelicula.getTitulo());       
         ps.setString(2, pelicula.getGenero());
@@ -96,7 +94,6 @@ public class ServicePelicula
         ps.setString(4, pelicula.getDirector());
         ps.setString(5, pelicula.getReparto());
         ps.setString(6, pelicula.getSinopsis());
-        ps.setString(7, pelicula.getImagen());
         ps.executeUpdate();
 
         ps.close();
@@ -107,12 +104,12 @@ public class ServicePelicula
     
     
 
-    public void updatePelicula(Peliculas pelicula) throws ClassNotFoundException ,SQLException 
+    public void updatePelicula(Pelicula pelicula) throws ClassNotFoundException ,SQLException 
     {
     	
     	
         Connection con = conexion.getConnection();
-        String sql = "UPDATE peliculas SET titulo=?,  genero=?, duracion=?, director=?, reparto= ?, sinopsis= ?, imagen=? WHERE id=?";
+        String sql = "UPDATE peliculas SET titulo=?,  genero=?, duracion=?, director=?, reparto= ?, sinopsis= ? WHERE id=?";
         PreparedStatement ps = con.prepareStatement(sql);
         ps.setString(1, pelicula.getTitulo());      
         ps.setString(3, pelicula.getGenero());
@@ -120,8 +117,7 @@ public class ServicePelicula
         ps.setString(5, pelicula.getDirector());
         ps.setString(6, pelicula.getReparto());
         ps.setString(7, pelicula.getSinopsis());
-        ps.setString(8, pelicula.getImagen());
-        ps.setInt(9, pelicula.getId());
+        ps.setInt(8, pelicula.getId());
         ps.executeUpdate();
         ps.close();
         con.close();

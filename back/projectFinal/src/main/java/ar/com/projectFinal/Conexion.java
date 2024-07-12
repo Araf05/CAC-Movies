@@ -20,7 +20,7 @@ public class Conexion
 		{
 			
 			Class.forName(driver);
-			conexion=DriverManager.getConnection("jdbc:mysql://localhost:3306/pruebaFinal","root","1234");//nombre de db y contraseña
+			conexion=DriverManager.getConnection("jdbc:mysql://localhost:3306/pruebaFinal","root","root");//nombre de db y contraseña
 			
 		}
 		

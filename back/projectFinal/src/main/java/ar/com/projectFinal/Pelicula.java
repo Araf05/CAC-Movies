@@ -1,26 +1,24 @@
 package ar.com.projectFinal;
-import java.time.LocalDate;
 
 
-public class Peliculas
+public class Pelicula
 {
 	
-	private int id;
+    private int id;
     private String titulo;    
     private String genero;
     private String duracion;
     private String director;
     private String reparto;
     private String sinopsis;
-    private String imagen;
 
    
    
    
-   public Peliculas() {}
+   public Pelicula() {}
 
-    public Peliculas(int id, String titulo, String genero, String duracion, String director,
-    		String reparto, String sinopsis, String imagen) {
+    public Pelicula(int id, String titulo, String genero, String duracion, String director,
+    		String reparto, String sinopsis) {
         this.id = id;
         this.titulo = titulo;
         this.genero = genero;
@@ -28,7 +26,6 @@ public class Peliculas
         this.director = director;
         this.reparto = reparto;
         this.sinopsis = sinopsis;
-        this.imagen = imagen;
     }
 
 
@@ -127,20 +124,6 @@ public class Peliculas
 	public void setSinopsis(String sinopsis) 
 	{
 		this.sinopsis = sinopsis;
-	}
-
-
-
-	public String getImagen()
-	{
-		return imagen;
-	}
-
-
-
-	public void setImagen(String imagen) 
-	{
-		this.imagen = imagen;
 	}
 	
     

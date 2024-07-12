@@ -36,7 +36,7 @@ public class ServletPelicula  extends HttpServlet
         try {
             if (pathInfo == null || pathInfo.equals("/")) 
             {
-                List<Peliculas> peliculas = peliculaService.getAllPeliculas();
+                List<Pelicula> peliculas = peliculaService.getAllPeliculas();
                 String json = objectMapper.writeValueAsString(peliculas);
                 resp.setContentType("application/json");
                 resp.getWriter().write(json);
@@ -45,7 +45,7 @@ public class ServletPelicula  extends HttpServlet
             {
                 String[] pathParts = pathInfo.split("/");
                 int id = Integer.parseInt(pathParts[1]);
-                Peliculas pelicula = peliculaService.getPeliculaById(id);
+                Pelicula pelicula = peliculaService.getPeliculaById(id);
                 if (pelicula != null) 
                 {
                     String json = objectMapper.writeValueAsString(pelicula);
@@ -58,7 +58,11 @@ public class ServletPelicula  extends HttpServlet
                 }
             }
         } 
-        catch (SQLException | ClassNotFoundException error) 
+        catch (SQLException error) 
+        {
+            throw new ServletException(error);
+        }
+        catch (ClassNotFoundException error) 
         {
             throw new ServletException(error);
         }
@@ -69,11 +73,15 @@ public class ServletPelicula  extends HttpServlet
     {
         try 
         {
-            Peliculas pelicula = objectMapper.readValue(req.getReader(), Peliculas.class);
+            Pelicula pelicula = objectMapper.readValue(req.getReader(), Pelicula.class);
             peliculaService.addPelicula(pelicula);
             resp.setStatus(HttpServletResponse.SC_CREATED);
         } 
-        catch (SQLException | ClassNotFoundException error) 
+        catch (SQLException error) 
+        {
+            throw new ServletException(error);
+        }
+        catch (ClassNotFoundException error) 
         {
             throw new ServletException(error);
         }
@@ -84,11 +92,15 @@ public class ServletPelicula  extends HttpServlet
     {
         try 
         {
-            Peliculas pelicula = objectMapper.readValue(req.getReader(), Peliculas.class);
+            Pelicula pelicula = objectMapper.readValue(req.getReader(), Pelicula.class);
             peliculaService.updatePelicula(pelicula);
             resp.setStatus(HttpServletResponse.SC_NO_CONTENT);
         } 
-        catch (SQLException | ClassNotFoundException error) 
+        catch (SQLException error) 
+        {
+            throw new ServletException(error);
+        }
+        catch (ClassNotFoundException error) 
         {
             throw new ServletException(error);
         }
@@ -110,10 +122,14 @@ public class ServletPelicula  extends HttpServlet
             		resp.sendError(HttpServletResponse.SC_BAD_REQUEST);
             	}
         	} 
-        	catch (SQLException | ClassNotFoundException error) 
-        	{
-        			throw new ServletException(error);
-        	}
+        	catch (SQLException error) 
+                {
+                    throw new ServletException(error);
+                }
+                catch (ClassNotFoundException error) 
+                {
+                    throw new ServletException(error);
+                }
     }
  
 
